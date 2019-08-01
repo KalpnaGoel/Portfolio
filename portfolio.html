@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 <link rel="stylesheet" href="style.css">
+  </head>
+  <body style=" margin: 0%; padding: 0%;">
+  <div id="layer" class="layer-wrapper">
+  <div class="head-container">
+    <canvas id="myCanvas">
+    <script>
+      let canvas = document.getElementById('myCanvas'),
+      context = canvas.getContext('2d');
+	  dpi = window.devicePixelRatio;
+      context.rect(0, 0, canvas.width, canvas.height);
+var fontBase = 500,                   // selected default width for canvas
+    fontSize = 30;                     // default size for font
+
+function getFont() {
+    var ratio = fontSize / fontBase;   // calc ratio
+    var size = canvas.width * ratio;   // get font size based on current width
+    return (size|0) + 'px Bauhaus 93'; // set font
+}
+  // create radial gradient
+      let grd = context.createRadialGradient(238, 50, 10, 238, 50, 300);
+      // light blue
+      grd.addColorStop(0, 'white');
+      // dark blue
+      grd.addColorStop(1, 'lightblue');
+      context.fillStyle = grd;
+      context.fill();
+	  context.font = getFont();
+	  context.strokeStyle = "black"; // set stroke color to red
+	  context.lineWidth = "1";
+	  context.strokeText("PORTFOLIO",50,60);
+	  context.lineWidth = "1";
+	  context.strokeText("Passionate About Creative,",100,80);
+	  context.strokeText("Design full Stack Application",100,100);
+	
+	  context.strokeText("By Richa Goel",180,120);
+    </script>
+	</canvas>
+	</div>
+	<div class="head-layer">
+	<div class="menu">
+               <a href="#layer" >Home</a>&nbsp;&nbsp;&nbsp;
+			   <a href="#info" >About</a>&nbsp;&nbsp;&nbsp;
+               <a href="#project">Project</a>&nbsp;&nbsp;&nbsp;
+               <a href="#contact-container">Contact</a>&nbsp;&nbsp;&nbsp;
+            </div>
+			</div>
+	<div id="info" class="info-container">
+     <p class="p-about">ABOUT</p>	 
+	 <div class="photo"><img src="photo2.jpg"/></div>
+	 <div class="spec">
+			<div class="section"><p id="spec-name">JAVA J2ee</p><div id="spec-per" class="java">90%</div></div><br>
+			<div class="section"><p id="spec-name">ATG Commerce</p><div  id="spec-per" class="atg">80%</div></div><br>
+			<div class="section"><p id="spec-name">SQL</p><div id="spec-per" class="sql">85%</div></div><br>
+			<div class="section"><p id="spec-name">HTML</p><div  id="spec-per" class="html">90%</div></div><br>
+			<div class="section"><p id="spec-name">CSS</p><div  id="spec-per" class="css">80%</div></div><br>
+			<div class="section"><p id="spec-name">JavaScript</p><div  id="spec-per" class="js">65%</div></div><br>
+         </div>
+	</div>
+               <p id="project" class="p-proj">PROJECTS</p>	
+			   <div class="project-container">
+               <div class="project">
+                  <img src="directwine.jpg"/>
+                  <h2>Directwine is the eccomerce website for the wine bottles which is the US based project, in which page are created for handle the json for Rest API.</h2>
+                  <h3><a href="https://www.wsjwine.com">Make the project</a></h3>
+               </div>
+			   <div class="project">
+                  <img src="portfolio.jpg"/>
+                  <h2>Creating portfolio</h2>
+                 <h3><a href="#layer">Make the project</a></h3>
+               </div>
+			   </div>
+    <div id="contact-container" class="contact-container">
+     <p id="contact" class="contact">Contact</p>	
+     <div id="oval_parent">
+    <div id="oval">
+	<h1> goelricha06@gmail.com</h1>
+	<h2>If you like my work and have some cool project to work on, just send me direct message through above given emailId or contact me through social sites listed below.</h2>
+	<h3><a href="https://www.linkedin.com/in/richa-goel-6534109a/">Linkedin</a>  |  <a href="https://www.instagram.com/richa7883">Instagram</a></h3>	
+	</div>
+</div>   
+</div> 
+</div>    
+  </body>
+</html>      
+
